@@ -1,0 +1,479 @@
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #101426, #202b50);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #8b9dff;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #c4cbe0;
+    line-height: 1.5;
+}
+
+/* Área principal */
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 30px;
+    background: #1a2038;
+    border: 1px solid #343e63;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px #00000030;
+    flex: 1;
+}
+
+section h2 {
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+#tela-inicial > p {
+    color: #c4cbe0;
+    margin-bottom: 25px;
+}
+
+/* Botões das categorias */
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-tema {
+    background: #293454;
+    color: white;
+    border: 1px solid #45547e;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+.botao-tema:hover {
+    background: #354674;
+}
+
+/* Informações da pergunta */
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #bdc8ff;
+    font-size: 0.95rem;
+}
+
+.barra-progresso {
+    height: 9px;
+    background: #303956;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+#progresso-preenchido {
+    width: 0;
+    height: 100%;
+    background: #8b9dff;
+    transition: width 0.3s;
+}
+
+/* Alternativas */
+#pergunta {
+    margin-bottom: 22px;
+}
+
+#alternativas {
+    display: grid;
+    gap: 12px;
+}
+
+.alternativa {
+    text-align: left;
+    background: #293454;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.alternativa.selecionada {
+    border-color: #8b9dff;
+    background: #374774;
+}
+
+.alternativa.correta {
+    background: #176b49;
+    border-color: #45d69a;
+}
+
+.alternativa.errada {
+    background: #812f43;
+    border-color: #ff8498;
+}
+
+.alternativa:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+/* Mensagens e botões */
+#mensagem {
+    min-height: 28px;
+    margin: 18px 0 12px;
+    line-height: 1.5;
+}
+
+#botao-proximo,
+#botao-reiniciar {
+    width: 100%;
+    background: #788bff;
+    color: #101426;
+}
+
+#botao-proximo:disabled {
+    background: #59627e;
+    color: #d3d8e7;
+    cursor: not-allowed;
+}
+
+.botao-secundario {
+    width: 100%;
+    margin-top: 12px;
+    background: #293454;
+    color: white;
+    border: 1px solid #45547e;
+}
+
+/* Tela de resultado */
+#tela-resultado {
+    text-align: center;
+}
+
+#resultado {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8b9dff;
+    margin: 25px 0 15px;
+}
+
+#mensagem-final {
+    color: #c4cbe0;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.escondido {
+    display: none !important;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aeb8d5;
+    font-size: 0.85rem;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+    header {
+        padding-top: 25px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 94%;
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        padding: 15px;
+    }
+
+    .informacoes {
+        font-size: 0.85rem;
+    }
+}
+/* =====================================
+   TEMA FUTURISTA NEON
+   ===================================== */
+
+:root {
+    --fundo: #050914;
+    --painel: #0b1425;
+    --painel-claro: #101e35;
+    --ciano: #39f5ff;
+    --roxo: #c45cff;
+    --texto: #eefaff;
+    --texto-suave: #9bb4cc;
+}
+
+/* Fundo futurista */
+body {
+    background:
+        radial-gradient(ellipse at 15% 20%, #12394a55, transparent 40%),
+        radial-gradient(ellipse at 85% 30%, #57206b44, transparent 40%),
+        linear-gradient(135deg, #030711, #091426 55%, #10091e);
+    color: var(--texto);
+}
+
+/* Título principal */
+header h1 {
+    color: var(--ciano);
+    text-shadow:
+        0 0 8px #39f5ff99,
+        0 0 22px #39f5ff66;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: var(--texto-suave);
+}
+
+/* Painel principal */
+.container {
+    background: linear-gradient(145deg, #0b1425ee, #111329f5);
+    border: 1px solid #39f5ff66;
+    border-radius: 22px;
+    box-shadow:
+        0 0 12px #39f5ff22,
+        0 0 35px #9b42ff18,
+        inset 0 0 20px #39f5ff08;
+}
+
+/* Títulos das telas */
+section h2 {
+    color: var(--texto);
+    text-shadow: 0 0 12px #39f5ff22;
+}
+
+#tela-inicial > p {
+    color: var(--texto-suave);
+}
+
+/* Categorias */
+.botao-tema {
+    background: linear-gradient(135deg, #101e35, #17152e);
+    color: var(--texto);
+    border: 1px solid #39f5ff66;
+    box-shadow: inset 0 0 12px #39f5ff08;
+    transition: 0.25s ease;
+}
+
+.botao-tema:hover {
+    background: linear-gradient(135deg, #123448, #28183f);
+    border-color: var(--ciano);
+    box-shadow:
+        0 0 10px #39f5ff66,
+        0 0 22px #39f5ff22;
+}
+
+/* Informações da pergunta */
+.informacoes {
+    color: var(--ciano);
+}
+
+/* Barra de progresso */
+.barra-progresso {
+    background: #17243a;
+    border: 1px solid #293a55;
+}
+
+#progresso-preenchido {
+    background: linear-gradient(90deg, var(--ciano), var(--roxo));
+    box-shadow:
+        0 0 10px var(--ciano),
+        0 0 20px #c45cff88;
+}
+
+/* Alternativas de resposta */
+.alternativa {
+    background: #0d192c;
+    color: var(--texto);
+    border: 1px solid #30425d;
+    box-shadow: inset 0 0 10px #39f5ff05;
+    transition: 0.2s ease;
+}
+
+.alternativa:hover:not(:disabled) {
+    background: #142942;
+    border-color: var(--ciano);
+    box-shadow: 0 0 12px #39f5ff33;
+}
+
+.alternativa.selecionada {
+    background: #102d40;
+    border-color: var(--ciano);
+    box-shadow:
+        0 0 10px #39f5ff55,
+        inset 0 0 12px #39f5ff12;
+}
+
+.alternativa.correta {
+    background: #10392f;
+    border-color: #42ffb0;
+    box-shadow: 0 0 12px #42ffb055;
+}
+
+.alternativa.errada {
+    background: #40182e;
+    border-color: #ff5da2;
+    box-shadow: 0 0 12px #ff5da255;
+}
+
+/* Mensagens */
+#mensagem {
+    color: var(--texto-suave);
+}
+
+/* Botão de confirmar e ver resultado */
+#botao-proximo {
+    background: linear-gradient(100deg, var(--ciano), #8d8bff);
+    color: #050914;
+    border: 1px solid var(--ciano);
+    box-shadow: 0 0 15px #39f5ff33;
+    font-weight: bold;
+}
+
+#botao-proximo:hover:not(:disabled) {
+    box-shadow:
+        0 0 12px #39f5ff99,
+        0 0 25px #39f5ff44;
+}
+
+#botao-proximo:disabled {
+    background: #253248;
+    border-color: #39465b;
+    color: #8292a8;
+    box-shadow: none;
+}
+
+/* Botão de encerrar quiz */
+.botao-encerrar {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    background: #1c1025;
+    color: #ff8bdc;
+    border: 1px solid #c45cff88;
+    box-shadow: inset 0 0 12px #c45cff0d;
+    transition: 0.25s ease;
+}
+
+.botao-encerrar:hover {
+    background: #32132f;
+    border-color: #ff79df;
+    box-shadow:
+        0 0 10px #c45cff66,
+        0 0 22px #c45cff22;
+}
+
+/* Tela de resultado */
+#resultado {
+    color: var(--ciano);
+    text-shadow: 0 0 12px #39f5ff55;
+}
+
+#mensagem-final {
+    color: var(--texto-suave);
+}
+
+#botao-reiniciar {
+    background: linear-gradient(100deg, var(--ciano), #8d8bff);
+    color: #050914;
+    box-shadow: 0 0 15px #39f5ff33;
+}
+
+.botao-secundario {
+    background: #101e35;
+    color: var(--ciano);
+    border: 1px solid #39f5ff66;
+}
+
+.botao-secundario:hover {
+    border-color: var(--ciano);
+    box-shadow: 0 0 12px #39f5ff33;
+}
+
+/* Rodapé */
+footer {
+    color: #7892ad;
+}
+
+/* Melhor adaptação para telas pequenas */
+@media (max-width: 600px) {
+    .container {
+        border-radius: 16px;
+    }
+
+    header h1 {
+        letter-spacing: 1px;
+    }
+
+    .alternativa,
+    .botao-tema,
+    #botao-proximo,
+    .botao-encerrar {
+        min-height: 48px;
+    }
+}
+.btn-voltar {
+    display: inline-block;
+    margin: 20px;
+    padding: 12px 20px;
+    color: #39f5ff;
+    background: #0b1425;
+    border: 1px solid #39f5ff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #39f5ff;
+    color: #050914;
+    box-shadow: 0 0 15px #39f5ff80;
+}

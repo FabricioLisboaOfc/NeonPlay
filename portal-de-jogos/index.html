@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050914">
+  <title>Portal de Jogos Neon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/nave.js" defer></script>
+  <script src="js/cobrinha.js" defer></script>
+  <script src="js/pacman.js" defer></script>
+  <script src="js/corrida.js" defer></script>
+  <script src="js/bloco.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</head>
+<body>
+  <a href="../index.html" class="btn-voltar">
+    ← Voltar ao menu principal
+</a>
+  <header class="site-header">
+    <div class="brand-mark">P<span>G</span></div>
+    <p class="eyebrow">ARCADE • RETRÔ • NEON</p>
+    <h1>PORTAL DE <span>JOGOS</span></h1>
+    <p class="subtitle">Escolha seu desafio e jogue!</p>
+  </header>
+
+  <main class="shell">
+    <section id="menu" class="screen">
+      <h2>Selecione um jogo</h2>
+      <p class="muted">Todos os jogos funcionam neste portal. Você pode sair de qualquer partida quando quiser.</p>
+      <div class="game-grid">
+        <button class="game-card cyan" data-game="nave"><span class="game-icon">🚀</span><strong>Nave Espacial</strong><small>3 vidas • 10 níveis</small><span class="card-cta">JOGAR →</span></button>
+        <button class="game-card green" data-game="cobrinha"><span class="game-icon">🐍</span><strong>Cobrinha</strong><small>Coma e cresça sem bater</small><span class="card-cta">JOGAR →</span></button>
+        <button class="game-card yellow" data-game="pacman"><span class="game-icon">🟡</span><strong>Pac-Man Neon</strong><small>Limpe o labirinto</small><span class="card-cta">JOGAR →</span></button>
+        <button class="game-card pink" data-game="corrida"><span class="game-icon">🏎️</span><strong>Corrida Neon</strong><small>Desvie dos carros</small><span class="card-cta">JOGAR →</span></button>
+        <button class="game-card purple" data-game="bloco"><span class="game-icon">🧊</span><strong>Desafio do Bloco</strong><small>Quebra-cabeça por fases</small><span class="card-cta">JOGAR →</span></button>
+      </div>
+      <p class="keyboard-tip">Dica: use as setas do teclado ou WASD quando disponível.</p>
+    </section>
+
+    <section id="game-screen" class="screen hidden">
+      <div class="game-topbar">
+        <div>
+          <p class="eyebrow">VOCÊ ESTÁ JOGANDO</p>
+          <h2 id="current-title">Jogo</h2>
+        </div>
+        <button id="exit-game" class="exit-button">✕ Encerrar jogo</button>
+      </div>
+      <div class="game-status">
+        <span id="status-main">Pronto para jogar</span>
+        <span id="status-extra"></span>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="game-canvas" width="800" height="500" aria-label="Área do jogo"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card">
+            <h3 id="overlay-title">Pronto?</h3>
+            <p id="overlay-text">Clique para começar.</p>
+            <button id="overlay-button" class="primary-button">Começar</button>
+          </div>
+        </div>
+      </div>
+      <div class="game-controls">
+        <p id="controls-help">Controles aparecem aqui.</p>
+        <button id="back-to-menu" class="secondary-button">← Voltar ao menu</button>
+      </div>
+    </section>
+  </main>
+  <footer>PORTAL DE JOGOS NEON <span>•</span> Projeto acadêmico de Front-End</footer>
+</body>
+</html>

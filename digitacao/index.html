@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050914">
+    <title>Datilografia Neon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <body>
+
+    <a href="../index.html" class="btn-voltar">
+        ← Voltar ao menu principal
+    </a>
+
+    <!-- O restante do seu código continua aqui -->
+    <header class="cabecalho">
+        <div class="logo">D<span>N</span></div>
+        <p class="subtitulo">TREINE SUA MENTE. DOMINE O TECLADO.</p>
+        <h1>DATILOGRAFIA <span>NEON</span></h1>
+        <p class="descricao">Você consegue digitar todas as palavras antes que o tempo acabe?</p>
+    </header>
+
+    <main class="painel">
+        <section id="tela-inicial">
+            <h2>Escolha seu nível</h2>
+            <p class="texto-suave">Cada nível possui 10 palavras diferentes.</p>
+
+            <div class="niveis">
+                <button class="botao-nivel facil" data-nivel="facil">
+                    <span class="emoji">⌨️</span>
+                    <strong>FÁCIL</strong>
+                    <small>Palavras curtas</small>
+                    <span class="detalhe">10 palavras · 90 segundos</span>
+                </button>
+
+                <button class="botao-nivel medio" data-nivel="medio">
+                    <span class="emoji">⚡</span>
+                    <strong>MÉDIO</strong>
+                    <small>Desafio intermediário</small>
+                    <span class="detalhe">10 palavras · 120 segundos</span>
+                </button>
+
+                <button class="botao-nivel dificil" data-nivel="dificil">
+                    <span class="emoji">🔥</span>
+                    <strong>DIFÍCIL</strong>
+                    <small>Palavras gigantes</small>
+                    <span class="detalhe">10 palavras · 180 segundos</span>
+                </button>
+            </div>
+
+            <p class="dica">Dica: digite exatamente como a palavra aparece, incluindo acentos.</p>
+        </section>
+
+        <section id="tela-jogo" class="escondido">
+            <div class="topo-jogo">
+                <span id="nivel-atual">NÍVEL FÁCIL</span>
+                <button id="botao-sair" class="botao-sair">✕ Sair</button>
+            </div>
+
+            <div class="estatisticas">
+                <div class="estatistica">
+                    <span>PALAVRAS</span>
+                    <strong id="contador">0/10</strong>
+                </div>
+                <div class="estatistica">
+                    <span>TEMPO</span>
+                    <strong id="tempo">90s</strong>
+                </div>
+                <div class="estatistica">
+                    <span>PONTOS</span>
+                    <strong id="pontos">0</strong>
+                </div>
+            </div>
+
+            <div class="barra">
+                <div id="barra-preenchida"></div>
+            </div>
+
+            <p class="instrucao">Digite a palavra abaixo:</p>
+            <div id="palavra" class="palavra">Preparado?</div>
+
+            <form id="formulario">
+                <label for="campo-digitacao" class="sr-only">Digite a palavra apresentada</label>
+                <input
+                    type="text"
+                    id="campo-digitacao"
+                    placeholder="Comece a digitar aqui..."
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    disabled
+                >
+                <button type="submit" id="botao-confirmar" disabled>
+                    CONFIRMAR PALAVRA ↵
+                </button>
+            </form>
+
+            <p id="feedback" role="status" aria-live="polite">
+                Pressione começar para iniciar.
+            </p>
+
+            <div class="rodape-jogo">
+                <span>ACERTOS: <strong id="acertos">0</strong></span>
+                <span>ERROS: <strong id="erros">0</strong></span>
+            </div>
+
+            <button id="botao-comecar" class="botao-principal">
+                INICIAR DESAFIO
+            </button>
+        </section>
+
+        <section id="tela-resultado" class="escondido">
+            <div class="icone-final">🏆</div>
+            <h2 id="titulo-resultado">Desafio concluído!</h2>
+            <p id="resumo-resultado" class="texto-suave"></p>
+
+            <div class="resultados">
+                <div class="resultado-card">
+                    <span>PONTUAÇÃO</span>
+                    <strong id="resultado-pontos">0</strong>
+                </div>
+                <div class="resultado-card">
+                    <span>PRECISÃO</span>
+                    <strong id="resultado-precisao">0%</strong>
+                </div>
+                <div class="resultado-card">
+                    <span>PALAVRAS</span>
+                    <strong id="resultado-palavras">0/10</strong>
+                </div>
+                <div class="resultado-card">
+                    <span>VELOCIDADE</span>
+                    <strong id="resultado-ppm">0 PPM</strong>
+                </div>
+            </div>
+
+            <button id="botao-repetir" class="botao-principal">
+                JOGAR NOVAMENTE
+            </button>
+
+            <button id="botao-menu" class="botao-secundario">
+                ESCOLHER OUTRO NÍVEL
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>DATILOGRAFIA NEON · DESAFIE SEUS LIMITES</p>
+    </footer>
+</body>
+</html>

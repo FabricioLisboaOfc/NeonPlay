@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+     <a href="../index.html" class="btn-voltar">
+    ← Voltar ao menu principal
+     </a>
+    <header>
+        <h1>Quiz Interativo</h1>
+        <p>Teste seus conhecimentos e descubra sua pontuação!</p>
+    </header>
+
+    <main class="container">
+
+        <section id="tela-inicial">
+            <h2>Escolha seu tema</h2>
+            <p>Selecione uma categoria para começar a jogar.</p>
+
+            <div id="categorias" class="categorias">
+                <button class="botao-tema" data-tema="tecnologia">
+                    💻 Tecnologia
+                </button>
+
+                <button class="botao-tema" data-tema="gerais">
+                    🌎 Conhecimentos Gerais
+                </button>
+
+                <button class="botao-tema" data-tema="games">
+                    🎮 Games
+                </button>
+
+                <button class="botao-tema" data-tema="filmes">
+                    🎬 Filmes
+                </button>
+
+                <button class="botao-tema" data-tema="ciencias">
+                    🔬 Ciências
+                </button>
+            </div>
+        </section>
+
+        <section id="tela-quiz" class="escondido">
+            <div class="informacoes">
+                <span id="nome-tema"></span>
+                <span id="progresso"></span>
+            </div>
+
+            <div class="barra-progresso">
+                <div id="progresso-preenchido"></div>
+            </div>
+
+            <h2 id="pergunta"></h2>
+
+            <div id="alternativas"></div>
+
+            <p id="mensagem" role="status" aria-live="polite"></p>
+
+            <button id="botao-proximo" disabled>
+                Confirmar resposta
+            </button>
+                <button id="botao-encerrar" class="botao-encerrar">
+                ✕ Encerrar quiz
+            </button>
+        </section>
+
+        <section id="tela-resultado" class="escondido">
+            <h2>Quiz finalizado!</h2>
+
+            <p id="resultado"></p>
+            <p id="mensagem-final"></p>
+
+            <button id="botao-reiniciar">
+                Jogar novamente
+            </button>
+
+            <button id="botao-temas" class="botao-secundario">
+                Escolher outro tema
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Quiz Interativo | Projeto de Front-End Web</p>
+    </footer>
+
+</body>
+</html>

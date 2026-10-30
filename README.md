@@ -22,7 +22,11 @@ Um jogo de perguntas e respostas com categorias como:
 - Filmes
 - Ciências
 
+<<<<<<< HEAD
 ### ⌨️ Jogo de Digitação
+=======
+### ⌨️ Desafio de Digitação
+>>>>>>> 8545027a3332856e67581908dd18bd4c9c415cdc
 Uma atividade para treinar a velocidade e a precisão da digitação, com três níveis de dificuldade:
 - Fácil
 - Médio
